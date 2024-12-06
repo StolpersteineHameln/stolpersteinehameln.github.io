@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stolpersteine Hameln</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.jpg">
+    <!--
+
+    TemplateMo 556 Catalog-Z
+
+    https://templatemo.com/tm-556-catalog-z
+
+    -->
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                Stolpersteine Hameln
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-1" href="index.html">Fotos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-1" href="about.html">Unser Projekt</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-1 active" href="contact.html">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <center>
+        <h2 class="tm-text-primary mb-5">Kontakt</h2>
+        <form id="contactForm" style="max-width: 600px; margin-top:30px; margin-bottom: 30px;">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" required="" style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" required="" style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" required="" style="width: 100%; padding: 10px; height: 150px; margin-bottom: 10px;"></textarea><br>
+
+            <button type="submit" style="padding: 10px 20px; background-color: #33ccff82; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Send
+            </button>
+        </form>
+        <script>
+            document.getElementById("contactForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Get form values
+                const name = encodeURIComponent(document.getElementById("name").value);
+                const email = encodeURIComponent(document.getElementById("email").value);
+                const message = encodeURIComponent(document.getElementById("message").value);
+
+                // Construct the mailto link
+                const mailtoLink = `mailto:tarondahn@hotmail.com?subject=Contact from ${name}&body=Name: ${name}%0AEmail: ${email}%0AMessage: ${message}`;
+
+                // Open the mailto link
+                window.location.href = mailtoLink;
+            });
+        </script>
+        <h2 class="tm-text-primary mb-5">Adresse</h2>
+        <div class="gmap-canvas" style="width: 90%; height: 400px">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2450.4016468427344!2d9.353841711251668!3d52.10882047183928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba8ee548d132e5%3A0xed6960f964b8055e!2sSchiller-Gymnasium%20Hameln!5e0!3m2!1sen!2sde!4v1727366168840!5m2!1sen!2sde" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </center>
+
+    <footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer">
+        <div class="container-fluid tm-container-small">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-12 px-5 mb-5">
+                    <h3 class="tm-text-primary mb-4 tm-footer-title">About Catalog-Z</h3>
+                    <p>Catalog-Z is free <a rel="sponsored" href="https://v5.getbootstrap.com/">Bootstrap 5</a> Alpha 2 HTML Template for video and photo websites. You can freely use this TemplateMo layout for a front-end integration with any kind of CMS website.</p>
+                </div>
+                <div class="col-lg-6 col-md-12 col-12 px-5 mb-5">
+                    <h3 class="tm-text-primary mb-4 tm-footer-title">Über Stolpersteine Hameln</h3>
+                    <p>Stolpersteine Hameln ist ein gemeinnütziges Projekt.</p>
+                    <p>Website und Bilder &copy Taron Dahn</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-md-7 col-12 px-5 mb-3">
+                    Copyright 2020 Catalog-Z Company. All rights reserved.
+                </div>
+                <div class="col-lg-4 col-md-5 col-12 px-5 text-right">
+                    Designed by <a href="https://templatemo.com" class="tm-text-gray" rel="sponsored" target="_parent">TemplateMo</a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/plugins.js"></script>
+    <script>
+        $(window).on("load", function () {
+            $('body').addClass('loaded');
+        });
+    </script>
+</body>
+</html>

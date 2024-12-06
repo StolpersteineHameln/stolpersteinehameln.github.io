@@ -231,7 +231,7 @@ a.tm-text-primary:hover { color:#666666; }
 
 .nav-link-3.active,
 .nav-link-3:hover {
-    border-color: #33CC66;
+    border-color: #33CCFF;
 }
 
 .nav-link-4.active,
@@ -625,4 +625,32 @@ select:not([multiple]) {
     }
 
     .tm-social-links li { margin-right: 3px; }
+}
+
+.row {
+    display: flex;
+    width: 95%;
+}
+
+.column {
+    flex: 50%;
+    padding: 10px;
+    border-width: 2px;
+    border-color: #005C7A;
+}
+
+#map {
+    height: 500px; /* Set the height of the map */
+    width: 100%; /* Full width */
+}
+
+.column {
+    float: left;
+    width: 10%;
+}
+
+.seen-on:after {
+    content: "";
+    display: table;
+    clear: both;
 }
